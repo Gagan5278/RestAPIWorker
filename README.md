@@ -39,3 +39,16 @@ Suppose in case if you want to add dictionary as pyaload
             return JSONProvider.init(dict: ["name": name, "job": job]) //Example Case
 
 ## How to use NetworkCheckMonitor for Internet connectivity (iOS 12+ only)
+  Drag and Drop NetworkCheckMonitor.swift in your project.
+  In you Appdelegate.swift file inside *didFinishLaunchingWithOptions* function add below
+  
+        //Activate network
+        NetworkCheckMonitor.shared.startMonitoring()
+  
+  
+  when you want to check Network use as below
+  
+        if !NetworkCheckMonitor.shared.netOn {
+            self.showAlertMessage(with: "Error", message: "Please check for internet connectivity", completionHandler: self.alertAction(action:))
+        }
+  
