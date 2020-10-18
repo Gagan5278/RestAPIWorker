@@ -37,3 +37,5 @@ Suppose in case if you want to add dictionary as pyaload
             return JSONProvider.Null
         case .updateUser(let name, let job):
             return JSONProvider.init(dict: ["name": name, "job": job]) //Example Case
+
+## How to use NetworkCheckMonitor for Internet connectivity (iOS 12+ only)
